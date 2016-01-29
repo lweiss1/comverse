@@ -1,0 +1,164 @@
+/* ######################################################## */
+/* General */
+/* ######################################################## */
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700,700italic);
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;font-weight: 300;
+    color:black;
+    margin: 0;
+    padding: 0;
+}
+
+#page { max-width: 2500px; margin: 0 auto; position: relative; }
+
+/* ######################################################## */
+/* Text Configuration */
+/* ######################################################## */
+
+h1 { margin: 0 0 1em 0;   font-size: 1.5em; font-weight: 300; }
+h2 { margin: 0 0 1em 0;   font-size: 1.5em; font-weight: 700; }
+h3 { margin: 0 0 0.5em 0; font-size: 1em;   font-weight: 300; }
+h4 { margin: 0 0 0.5em 0; font-size: 1em;   font-weight: 700; }
+
+p { margin: 0 0 1em 0; font-size: .8em; font-weight: 300; }
+
+
+/* ######################################################## */
+/* Header */
+/* ######################################################## */
+
+header { 
+    /*
+    height: 50px; 
+    position: relative; 
+    */
+}
+
+/* Logo */
+header a.logo {
+    /*position: absolute;*/
+    display:  block;
+    width:    185px;
+    height:   62px;
+    background: url(../img/comverse-logo.png) no-repeat 0 0;
+    background-size: contain;
+    top: 7px;
+    bottom: 7px;
+}
+
+header a.logo span { display: none }
+
+/* Main Navigation bar */
+header nav.main_nav , nav.sub_nav {
+    list-style-type: none;
+}
+
+header nav.main_nav li , nav.sub_nav li {
+    display: inline;
+    margin-right:1em;
+}
+
+header nav.main_nav li a , nav.sub_nav li a {
+    text-decoration: none;
+    color: black;
+}
+
+header nav.sub_nav {
+    position: relative;
+    width: 200px;
+}
+
+header nav.main_nav li:after {
+    width: 1px;
+    height: 20px;
+    content: url('../img/divider.png');
+    margin-left: 1em;
+    top: 0px;
+}
+
+header nav.main_nav li:last-child:after {
+    content: ""; 
+}
+
+header nav.sub_nav li a {
+    position: absolute;
+    right: 0px;
+}
+
+header nav.sub_nav li a:before {
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    content: url('../img/divider.png');
+    top: 0px;
+    right: 30px;
+}
+
+header nav.sub_nav form.lang_form {
+    position: absolute;
+    left:0px;
+    
+}
+
+
+header nav.sub_nav form.lang_form select {
+    border: none;
+    height: 1em;
+ 
+}
+
+/* Search Box */
+form.search_form {
+    position: relative;
+    border: 1px solid #808080;
+    border-radius: 7px;
+    width:170px;
+    height: 23px;
+    overflow: hidden;
+    display: block;
+}
+
+#search_box {
+    position: absolute;
+    width: 120px;
+    height: 21px;
+    border: none;
+    display: inline;
+    margin: auto 1px 0;
+    top: 0px;
+    bottom:1px;
+}
+
+
+#search_bt:before {
+    width: 1px;
+    height: 23px;
+    content: url('../img/divider.png');
+    position: absolute;
+    right: 20px;
+    display: inline;
+    top: 0px;
+    
+}
+
+
+#search_bt {
+    position: absolute;
+    border: none;
+    width: 12px;
+    height: 23px;
+    background: url(../img/searchBtn.png) no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: inline;
+    margin-left: 2px;
+    right: 8px;
+}
+
+form.search_form label {
+    display: none;
+}
+
