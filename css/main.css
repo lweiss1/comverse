@@ -18,12 +18,12 @@ body {
 /* Text Configuration */
 /* ######################################################## */
 
-h1 { margin: 0 0 1em 0;   font-size: 1.5em; font-weight: 300; }
-h2 { margin: 0 0 1em 0;   font-size: 1.5em; font-weight: 700; }
+h1 { margin: 0 0 1em 0;   font-size: 3em; font-weight: 300; }
+h2 { margin: 0 0 1em 0;   font-size: 3em; font-weight: 700; }
 h3 { margin: 0 0 0.5em 0; font-size: 1em;   font-weight: 300; }
 h4 { margin: 0 0 0.5em 0; font-size: 1em;   font-weight: 700; }
 
-p { margin: 0 0 1em 0; font-size: .8em; font-weight: 300; }
+p { margin: 0 0 1em 0; font-size: 1em; font-weight: 300; }
 
 
 /* ######################################################## */
@@ -51,9 +51,14 @@ header a.logo {
 
 header a.logo span { display: none }
 
-/* Main Navigation bar */
+/* Main and Sub Navigation bars */
 header nav.main_nav , nav.sub_nav {
     list-style-type: none;
+}
+
+header nav.sub_nav {
+    position: relative;
+    width: 170px;
 }
 
 header nav.main_nav li , nav.sub_nav li {
@@ -66,14 +71,9 @@ header nav.main_nav li a , nav.sub_nav li a {
     color: black;
 }
 
-header nav.sub_nav {
-    position: relative;
-    width: 200px;
-}
-
 header nav.main_nav li:after {
     width: 1px;
-    height: 20px;
+    height: 25px;
     content: url('../img/divider.png');
     margin-left: 1em;
     top: 0px;
@@ -86,6 +86,8 @@ header nav.main_nav li:last-child:after {
 header nav.sub_nav li a {
     position: absolute;
     right: 0px;
+    margin-left: 50px;
+
 }
 
 header nav.sub_nav li a:before {
@@ -94,13 +96,14 @@ header nav.sub_nav li a:before {
     height: 20px;
     content: url('../img/divider.png');
     top: 0px;
-    right: 30px;
+    left: -10px;
 }
 
-header nav.sub_nav form.lang_form {
+header nav.sub_nav form.lang_form select {
     position: absolute;
     left:0px;
-    
+    /*width: 30px;
+    height:60px;*/
 }
 
 
@@ -124,7 +127,7 @@ form.search_form {
 #search_box {
     position: absolute;
     width: 120px;
-    height: 21px;
+    height: 23px;
     border: none;
     display: inline;
     margin: auto 1px 0;
@@ -132,8 +135,7 @@ form.search_form {
     bottom:1px;
 }
 
-
-#search_bt:before {
+#search_box:before {
     width: 1px;
     height: 23px;
     content: url('../img/divider.png');
@@ -143,7 +145,6 @@ form.search_form {
     top: 0px;
     
 }
-
 
 #search_bt {
     position: absolute;
@@ -161,4 +162,129 @@ form.search_form {
 form.search_form label {
     display: none;
 }
+
+/* ######################################################## */
+/* Main Section */
+/* ######################################################## */
+
+section.main {
+    position: relative;
+    background: url(../img/slide-bg-complexity.jpg) no-repeat 0 0;
+    height: 639px;
+}
+
+/* Learn More button */
+a.b1 {
+    position: relative;
+    /*border: 1px solid #808080;*/
+    border-radius: 7px;
+    background: #2190c7;
+    width: 170px;
+    line-height: 32px;
+    height: 32px;
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+}
+
+a.b1 span {
+    position: absolute;
+    color: white;
+    text-transform: uppercase;
+    text-indent: 5px;
+    
+    vertical-align: middle;
+    /*line-height: normal;*/
+}
+
+a.b1 span:after {
+    width: 10px;
+    height: 13px;
+    content: url('../img/btnArrow.png');
+    position: absolute;
+    right: -55px;
+    display: inline;
+    vertical-align: middle;
+}
+
+/* Radio Button form */
+form.radio_form input span,
+form.radio_form legend {
+    display: none;
+}
+
+
+form.radio_form input[type=radio]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+form.radio_form input[type=radio]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2em;
+  line-height  : 1.5em;
+}
+
+form.radio_form input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.15em 0.15em 0.15em 0.15em;
+  border-radius    : 0.25em;
+  background       : white;
+  vertical-align   : bottom;
+}
+
+form.radio_form input[type=radio   ]:not(old):checked + label > span{
+  background: #2190c7;
+}
+
+form.radio_form label span.hidden {
+    display: none;
+}
+
+/* Sub Content */
+div.sub_content {
+    font-size: 1.5em;
+    position: relative;
+    border-radius: 7px;
+    width:13em;
+    height: 8em;
+    overflow: hidden;
+    display: inline-block;
+    opacity: 0.8;
+    background: #f842a0;
+}
+
+div.sub_content article {
+    margin-left: 1em .5em;
+}
+
+div.sub_content article h3 {
+    color: white;
+}
+
+div.sub_content article a {
+    font-size: .7em;
+    font-weight: 700;
+    text-decoration: none;
+    color: white;
+}
+
+ul.sub_content_ul {
+    position: relative;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.sub_content_ul li {
+    display: inline;
+}
+
+
+
+
 
