@@ -126,7 +126,7 @@ form.search_form {
 
 #search_box {
     position: absolute;
-    width: 120px;
+    width: 130px;
     height: 23px;
     border: none;
     display: inline;
@@ -135,14 +135,14 @@ form.search_form {
     bottom:1px;
 }
 
-#search_box:before {
+#search_bt:before {
     width: 1px;
     height: 23px;
     content: url('../img/divider.png');
     position: absolute;
     right: 20px;
     display: inline;
-    top: 0px;
+    top: 1px;
     
 }
 
@@ -242,6 +242,10 @@ form.radio_form input[type=radio   ]:not(old) + label > span{
   vertical-align   : bottom;
 }
 
+form.radio_form input[type=radio   ]:not(old):hover + label > span{
+  background: #2190c7;
+}
+
 form.radio_form input[type=radio   ]:not(old):checked + label > span{
   background: #2190c7;
 }
@@ -259,7 +263,6 @@ div.sub_content {
     height: 8em;
     overflow: hidden;
     display: inline-block;
-    opacity: 0.8;
 }
 
 div.sub_content h3 {
@@ -276,18 +279,31 @@ div.sub_content a.b2 {
 }
 
 #sc_1 {
-    background: #f842a0;
+    background-color: rgba(248, 66, 160, 0.8);
+}
+
+#sc_1:hover {
+    background-color: rgba(248, 66, 160, 1);
 }
 
 #sc_2 {
-    background: #6ac43d;
+    background-color: rgba(106, 196, 61, 0.8);
     margin-left:1em;
     margin-right:1em;
 }
 
-#sc_3 {
-    background: #ff7518;
+#sc_2:hover {
+    background-color: rgba(106, 196, 61, 1);
 }
+
+#sc_3 {
+    background-color: rgba(255, 117, 24, 0.8);
+}
+
+#sc_3:hover {
+    background-color: rgba(255, 117, 24, 1);
+}
+
 
 #sc_1 a:before {
     content: url('../img/link-icon-image.png');
