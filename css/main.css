@@ -513,7 +513,7 @@ a.b1_services {
     /*border: 1px solid #808080;*/
     border-radius: 7px;
     background: #2f88ac;
-    opacity: 0.9;
+    background-color: rgba(47, 136, 172, 0.8);
     width: 200px;
     line-height: 40px;
     height: 40px;
@@ -554,7 +554,12 @@ section.news {
 
 section.news h1 {
     color: white;
-    margin-bottom: 2.5em;
+    margin-bottom: 1.5em;
+}
+
+div.news {
+    position: relative;
+    display: inline-block;
 }
 
 div.news h2 {
@@ -563,17 +568,83 @@ div.news h2 {
 }
 
 section.news ul {
-    position: relative;
     list-style-type: none;
     padding-left: 0;
 }
 
-article.cal_view {
-    width:13em;
-    height: 5em;
-    background: white;
-    overflow: hidden;
+
+article.news_a {
+    position: relative;
     display: inline-block;
-    opacity: 0.5;
+    width:20em;
+    height: 10em;
+    overflow: hidden;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+article.news_a ul {
+    position: absolute;
+    
+    display: inline-block;
+}
+
+article.news_a p {
+    position: absolute;
+    font-size: 1em;
+    right: 0.5em;
+    display: inline-block;
+    width: 12.5em;
+    top: 1em;
+    font-weight: 300;
+}
+
+ul.cal_view {
+    width: 5em;
+    height: 8em;
+    background-color: #3399cc;
+    margin-left: 1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    box-shadow: 0px 1px 5px #484848;
+}
+
+ul hr {
+    border: none;
+    border-bottom: 2px dotted white;
+    color:white;
+    height:1px;
+  
+}
+
+li.cal_day {
+    display: block; 
+    font-weight: 700;
+    font-size: 3em;
+    color: white;
+    text-align: center;
+}
+
+li.cal_month {
+    display: block;
+    font-weight: 300;
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+
+a.news_bt , a.events_bt {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+a.news_bt:before {
+    content: url(../img/eventListIconNews.png);
+    margin-right: 0.5em;
+}
+
+a.events_bt:before {
+    content: url(../img/eventListIconEvents.png);
+    margin-right: 0.5em;
 }
 
