@@ -564,7 +564,9 @@ div.news {
 
 div.news h2 {
     color: white;
-    margin-bottom: .5em;
+    font-weight: 300;
+    font-size: 2em;
+    margin-bottom: .25em;
 }
 
 section.news ul {
@@ -580,6 +582,10 @@ article.news_a {
     height: 10em;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+article.news_a:hover {
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 article.news_a ul {
@@ -632,7 +638,7 @@ li.cal_month {
     text-align: center;
 }
 
-a.news_bt , a.events_bt {
+a.news_bt , a.events_bt, a.press_bt {
     display: block;
     text-decoration: none;
     color: white;
@@ -643,8 +649,30 @@ a.news_bt:before {
     margin-right: 0.5em;
 }
 
+a.news_bt:hover:before {
+    content: url(../img/eventListIconNews_hover.png);
+}
+
 a.events_bt:before {
     content: url(../img/eventListIconEvents.png);
     margin-right: 0.5em;
 }
 
+a.events_bt:hover:before {
+    content: url(../img/eventListIconEvents_hover.png);
+}
+
+a.press_bt:before {
+    content: url(../img/eventListIconPress.png);
+    margin-right: 0.5em;
+}
+
+a.press_bt:hover:before {
+    content: url(../img/eventListIconPress_hover.png);
+}
+
+a.news_bt:hover , a.events_bt:hover, a.press_bt:hover {
+    color: black;
+}
+
+:hover:before {
