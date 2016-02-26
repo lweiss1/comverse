@@ -606,7 +606,6 @@ article.news_a:hover {
 
 article.news_a ul {
     position: absolute;
-    
     display: inline-block;
 }
 
@@ -691,4 +690,95 @@ a.news_bt:hover , a.events_bt:hover, a.press_bt:hover {
     color: black;
 }
 
-:hover:before {
+
+/* ######################################################## */
+/* Stories Section */
+/* ######################################################## */
+section.stories {
+    position: relative;
+    background-color: #ececec;
+    height:40em;
+}
+
+section.news h1 {
+    color: black;
+    margin-bottom: 1.5em;
+}
+
+div.people1 {
+    position: relative;
+    background-color: white;
+    width: 20em;
+    height: 11em;
+    padding:0.5em;
+    
+}
+
+
+
+section.sub_person {
+    position: relative;
+    display: block;
+    height:6.5em;
+}
+
+section.person_section hr {
+    position: relative;
+    display: block;
+}
+
+img.person_img {
+    position: absolute;
+    display: inline-block;
+}
+
+blockquote.person_quote {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+    margin: 0;
+    width: 12em;
+    
+}
+
+blockquote.person_quote p {
+    font-weight: 300;
+    font-size: 1em;
+    color: #808080;
+}
+
+section.person_bottom {
+    position: relative;
+    height: 42px;
+    display: block;
+    width: 20em;
+}
+
+section.person_bottom img {
+    position: absolute;
+    display: inline-block;
+    right: 0;
+}
+
+section.person_info {
+    position: absolute;
+    display: inline-block;
+}
+
+h3.person_name {
+    color: #3398cc;
+    font-size: .9em;
+}
+
+h3.person_role {
+    color: #808080;
+    font-size: .8em;
+}
+
+
+
+
+
+
+
+
