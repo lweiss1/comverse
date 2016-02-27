@@ -700,18 +700,55 @@ section.stories {
     height:40em;
 }
 
-section.news h1 {
-    color: black;
-    margin-bottom: 1.5em;
+section.stories_col1 {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    
 }
 
-div.people1 {
+a.people_bt,
+a.people_bt2 {
+    display:block;
+    overflow: hidden;
+    width: 22em;
+    height: 12em;
+    margin: 0.25em;
+    
+}
+
+div.people1,
+div.people2 {
     position: relative;
     background-color: white;
-    width: 20em;
+    width: 21em;
     height: 11em;
-    padding:0.5em;
-    
+    padding: 0.5em;
+    -webkit-transition: margin-top 0.3s linear;
+    transition: margin-top 0.3s;
+}
+
+a.people_bt2 {
+    width:14.25em;
+}
+div.people2 {
+    width:13.25em;
+}
+
+div.people_div {
+    position: relative;
+    background-color: #3399cc;
+    display: block;
+    width: 21em;
+    height: 11em;
+    padding: 0.5em;
+    -webkit-transition: margin-top 0.3s linear;
+    transition: margin-top 0.3s;
+}
+
+a.people_bt:hover div.people1,
+a.people_bt2:hover div.people2 {
+    margin-top: -12em;
 }
 
 
@@ -722,9 +759,12 @@ section.sub_person {
     height:6.5em;
 }
 
-section.person_section hr {
+hr.hr_stories {
     position: relative;
     display: block;
+    border-style: inset;
+    border-width: 1px;
+    border-color: #ececec;
 }
 
 img.person_img {
@@ -747,14 +787,20 @@ blockquote.person_quote p {
     color: #808080;
 }
 
-section.person_bottom {
+section.person_bottom,
+section.person_bottom2 {
     position: relative;
     height: 42px;
     display: block;
     width: 20em;
 }
 
-section.person_bottom img {
+section.person_bottom2 {
+    width: 13.25em;
+}
+
+section.person_bottom img,
+section.person_bottom2 img {
     position: absolute;
     display: inline-block;
     right: 0;
@@ -775,9 +821,97 @@ h3.person_role {
     font-size: .8em;
 }
 
+div.logo_block {
+    position: relative;
+}
+
+a.logo_bt {
+    margin: 0.25em;
+    position: relative;
+    display: inline-block;
+    height: 95px;
+    width: 108px; 
+    overflow: hidden;
+}
 
 
 
+a.logo_bt img {
+    position: relative;
+    display: block;
+    
+    -webkit-transition: margin-top 0.3s linear;
+    transition: margin-top 0.3s;
+}
+
+div.logo_bt_blue_slide {
+    position: relative;
+    height: 75px;
+    padding: 10px;
+    width: 88px;
+    background-color: #3399cc;
+    display: block;
+    
+    transition: margin-top 0.3s linear;
+    -webkit-transition: margin-top 0.3s;
+}
+
+a.logo_bt:hover img {
+    margin-top: -95px;
+}
+
+
+/* ######################################################## */
+/* Footer */
+/* ######################################################## */
+footer {
+    background-color: #2c2b2b;
+    height: 30em;
+}
+
+
+footer h2 {
+    color: #dcdbde;
+    font-size: 1.5em;
+    font-weight: 300;
+}
+
+section.footer_links {
+    position: relative;
+    display: inline-block;
+    vertical-align: text-top;
+    margin-top: 1em;
+    margin-right: 2em;
+}
+
+a.footer_link {
+    display: block;
+    text-decoration: none;
+    color: #dcdbde;
+}
+
+a.footer_link:hover {
+    text-decoration: underline;
+}
+
+section.subscribe {
+    position: relative;
+    display: inline-block;
+    vertical-align: text-top;
+    background-color: #3d3d3d;
+    width: 20em;
+    height: 30em;
+}
+
+div.subscribe_div {
+    width:18em;
+    height: 28em;
+    margin: 1em;
+}
+
+div.subscribe_div h2 {
+    color: #2d91ca;
+}
 
 
 
