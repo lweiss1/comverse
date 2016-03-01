@@ -4,66 +4,204 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,300,700,700italic);
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;font-weight: 300;
-    color:black;
-    margin: 0;
-    padding: 0;
+/* CSS Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin:         0;
+	padding:        0;
+	border:         0;
+	font-size:      100%;
+	font:           inherit;
+	vertical-align: baseline;
 }
 
-#page { max-width: 2500px; margin: 0 auto; position: relative; }
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing:  0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size:   1rem; font-weight: 300;
+    color:       black;
+    margin:      0;
+    padding:     0;
+}
+
+#page { max-width: 2500px; height: auto; position: relative; }
 
 /* ######################################################## */
 /* Text Configuration */
 /* ######################################################## */
 
-h1 { margin: 0 0 1em 0;   font-size: 3em; font-weight: 300; }
-h2 { margin: 0 0 1em 0;   font-size: 3em; font-weight: 700; }
-h3 { margin: 0 0 0.5em 0; font-size: 1em;   font-weight: 300; }
-h4 { margin: 0 0 0.5em 0; font-size: 1em;   font-weight: 700; }
+h1 { margin: 0 0 1rem 0;   font-size: 3rem; font-weight: 300; }
+h2 { margin: 0 0 1rem 0;   font-size: 3rem; font-weight: 700; }
+h3 { margin: 0 0 0.5rem 0; font-size: 1rem; font-weight: 300; }
+h4 { margin: 0 0 0.5rem 0; font-size: 1rem; font-weight: 700; }
 
-p { margin: 0 0 1em 0; font-size: 1em; font-weight: 300; }
+p { margin: 0 0 1rem 0; font-size: 1rem; font-weight: 300; }
 
 
 /* ######################################################## */
 /* Header */
 /* ######################################################## */
 
-header { 
-    /*
-    height: 50px; 
-    position: relative; 
-    */
+header {
+    height: 8rem;
 }
+
+section.header_section { 
+    display:    block;
+    max-width:  80%;
+    height:     80%;
+    min-height: 5rem;
+    margin:     .5rem auto;
+    position:   relative;
+    
+}
+
 
 /* Logo */
-header a.logo {
-    /*position: absolute;*/
-    display:  block;
-    width:    185px;
-    height:   62px;
-    background: url(../img/comverse-logo.png) no-repeat 0 0;
-    background-size: contain;
-    top: 7px;
-    bottom: 7px;
+@media screen and (min-width:1350px) {
+    header a.logo {
+        position: absolute;
+        display:         inline-block;
+        width:       185px;
+        height:      62px;
+        background:      url(../img/comverse-logo.png) no-repeat 0 0;
+        left: 0px;
+        bottom: 0;
+    }
 }
 
-header a.logo span { display: none }
+@media screen and (max-width:1350px) {
+    a.logo {
+        position: absolute;
+        display:         inline-block;
+        width:       108px;
+        height:      36px;
+        background:      url(../img/comverse-logo-medium.png) no-repeat 0 0;
+        left: 0px;
+        bottom: 0;
+    }
+}
+
+header a.logo span { 
+    display: none 
+}
 
 /* Main and Sub Navigation bars */
 header nav.main_nav , nav.sub_nav {
     list-style-type: none;
 }
 
-header nav.sub_nav {
-    position: relative;
-    width: 170px;
+nav.main_nav_mobile {
+    display: none;
 }
 
-header nav.main_nav li , nav.sub_nav li {
-    display: inline;
-    margin-right:1em;
+@media screen and (min-width:1350px) {
+    nav.main_nav {
+        position:       absolute;
+        width: 60%;
+        min-width: 8rem;
+        height:         auto;
+        bottom: 0px;
+        margin: auto;
+        right: 0;
+        left: 0;
+    }
+}
+
+@media screen and (max-width:1350px) {
+    nav.main_nav {
+        position:       absolute;
+        width: 60%;
+        min-width: 8rem;
+        height:         auto;
+        bottom: 0px;
+        margin: auto;
+        left: 7em;
+        
+    }
+}
+
+nav.sub_nav {
+    width: 11rem;
+    min-width: 11rem;
+}
+
+section.header_right {
+    position:       absolute;
+    height:         100%;
+    width:          auto;
+    display:        inline-block;
+    right: 0px;
+    bottom: 0px;
+}
+
+li.drop_li1 {
+    margin-left: 3%;
+}
+
+li.drop_li1,
+li.drop_li2,
+li.drop_li3,
+li.drop_li4 {
+    display:        inline-block;
+    vertical-align: text-bottom;
+    width: auto;
+    text-align: center;
+}
+
+ul.ul_col {
+    position:        relative;
+    display:         inline-block;
+    list-style-type: none;
+    vertical-align:  top;
+    margin-right:    3rem;
+    margin-left:     1rem;
+    min-width:       14.5rem;
+}
+
+ul.ul_col li {
+    margin-bottom: .25em;
+}
+
+ul.ul_col a {
+    text-decoration: none;
+}
+
+ul.ul_col a:hover {
+    text-decoration: underline;
 }
 
 header nav.main_nav li a , nav.sub_nav li a {
@@ -71,93 +209,246 @@ header nav.main_nav li a , nav.sub_nav li a {
     color: black;
 }
 
-header nav.main_nav li:after {
+div.drop_div1 {
+    margin:4px auto;
+    position:absolute;
+    margin: 0 auto;
+    /*display: none;*/
+    left:-999em;
+    text-align:left;
+    padding:10px 5px 10px 5px;
+    border:1px solid #777777;
+    border-top:none;
+    width: 60em;
+    height: 20em;
+    background-color: white;
+}
+
+p.line_divider {
+    position:relative;
+    display: inline-block;
+    background: url(../img/line_divider_video.png) no-repeat;
     width: 1px;
-    height: 25px;
+    height: 185px;
+    top: 1em;
+    margin-right: 3em;
+}
+
+p.menu_img_1,
+p.menu_img_2,
+p.menu_img_3,
+p.menu_img_4 {
+    position:relative;
+    display: inline-block;
+    width: 300px;
+    height: 196px;
+    top: 1em;
+    right: 1em;
+}
+
+p.menu_img_1 {
+    background: url(../img/Megamenu_Your_Needs_eBook.jpg) no-repeat;
+}
+
+p.menu_img_2 {
+    background: url(../img/megamenu_digital_lifestyle.jpg) no-repeat;
+}
+
+p.menu_img_3 {
+    background: url(../img/Megamenu_News_and_media.jpg) no-repeat;
+}
+
+p.menu_img_4 {
+    background: url(../img/Megamenu_About_Comverse_by_the_numbers.jpg) no-repeat;
+}
+
+li.drop_li1:hover div.drop_div1,
+li.drop_li2:hover div.drop_div1,
+li.drop_li3:hover div.drop_div1,
+li.drop_li4:hover div.drop_div1 {
+    /*display: block;*/
+    z-index:1;
+    left:-11.5em;
+    /*right: auto;*/
+    
+    top:auto;
+    vertical-align: middle;
+}
+
+li.drop_li1:hover,
+li.drop_li2:hover,
+li.drop_li3:hover,
+li.drop_li4:hover {
+    border-top: .5px solid;
+    border-left: .5px solid;
+    border-right: .5px solid;
+    border-color: #D0D0D0;
+}
+
+/*
+li.drop_li1:after,
+li.drop_li2:after,
+li.drop_li3:after {
+    width: auto;
+    height: auto;
     content: url('../img/divider.png');
-    margin-left: 1em;
+    margin-left: 2rem;
+    margin-right: 2rem;
     top: 0px;
+}*/
+
+
+
+li.sub_nav_item {
+    position: relative;
+    display: inline-block;
 }
 
-header nav.main_nav li:last-child:after {
-    content: ""; 
+
+img.divider {
+    position: relative;
+    display: inline-block;
+    vertical-align: text-bottom;
 }
 
-header nav.sub_nav li a {
-    position: absolute;
-    right: 0px;
-    margin-left: 50px;
-
-}
-
-header nav.sub_nav li a:before {
-    position: absolute;
+img.divider1 {
+    position: relative;
+    display: inline-block;
+    vertical-align: text-bottom;
     width: 1px;
-    height: 20px;
-    content: url('../img/divider.png');
-    top: 0px;
-    left: -10px;
+    height: 23px;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
-header nav.sub_nav form.lang_form select {
-    position: absolute;
-    left:0px;
-    /*width: 30px;
-    height:60px;*/
-}
-
-
-header nav.sub_nav form.lang_form select {
+header li.lang_form {
+    position: relative;
+    display: inline-block;
     border: none;
-    height: 1em;
- 
 }
+
 
 /* Search Box */
-form.search_form {
-    position: relative;
-    border: 1px solid #808080;
-    border-radius: 7px;
-    width:170px;
-    height: 23px;
-    overflow: hidden;
-    display: block;
+
+@media screen and (min-width:1350px) {
+    form.search_form {
+        position: absolute;
+        border: 1px solid #808080;
+        border-radius: 7px;
+        overflow: hidden;
+        bottom: 0px;
+        width: 100%;
+        height: 21%
+    }
 }
 
-#search_box {
-    position: absolute;
-    width: 130px;
-    height: 23px;
-    border: none;
-    display: inline;
-    margin: auto 1px 0;
-    top: 0px;
-    bottom:1px;
+@media screen and (max-width:1350px) {
+    form.search_form {
+        position: absolute;
+        border: 1px solid #808080;
+        border-radius: 7px;
+        overflow: hidden;
+        bottom: 0px;
+        width: 50%;
+        height: 21%
+    }
 }
 
-#search_bt:before {
-    width: 1px;
-    height: 23px;
-    content: url('../img/divider.png');
-    position: absolute;
-    right: 20px;
-    display: inline;
-    top: 1px;
-    
+@media screen and (min-width:1350px) {
+    #search_box {
+        position: relative;
+        width: 80%;
+        height: 100%;
+        border: none;
+        display: inline-block;
+        margin: auto 1px 0;
+        top: 0px;
+        bottom:1px;
+    }
 }
 
-#search_bt {
-    position: absolute;
-    border: none;
-    width: 12px;
-    height: 23px;
-    background: url(../img/searchBtn.png) no-repeat;
-    background-position: center;
-    background-size: contain;
-    display: inline;
-    margin-left: 2px;
-    right: 8px;
+@media screen and (max-width:1350px) {
+    #search_box {
+        position: absolute;
+        right: 0;
+        width: 60%;
+        height: 100%;
+        border: none;
+        display: inline-block;
+        margin: auto 1px 0;
+        top: 0px;
+        bottom:1px;
+    }
 }
+
+@media screen and (min-width:1350px) {
+    #search_bt:before {
+        width: 1px;
+        height: 23px;
+        content: url('../img/divider.png');
+        position: absolute;
+        right: 20px;
+        display: inline;
+        top: 1px;   
+    }
+}
+
+@media screen and (max-width:1350px) {
+    #search_bt:before {
+        content: ""; 
+    }
+}
+
+@media screen and (max-width:1350px) {
+    #search_bt:after {
+        width: 1px;
+        height: 23px;
+        content: url('../img/divider.png');
+        position: absolute;
+        left: 20px;
+        display: inline;
+        top: 1px; 
+    }
+}
+
+@media screen and (min-width:1350px) {
+    #search_bt {
+        position: absolute;
+        border: none;
+        min-width: 12px;
+        max-width: 12px;
+        width: 12px;
+        height: 11px;
+        background: url(../img/searchBtn.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: inline-block;
+        right: .5rem;
+        margin-top:3%;
+
+    }
+}
+
+@media screen and (max-width:1350px) {
+    #search_bt {
+        position: absolute;
+        border: none;
+        min-width: 12px;
+        max-width: 12px;
+        width: 12px;
+        height: 11px;
+        background: url(../img/searchBtn.png) no-repeat;
+        background-position: center;
+        background-size: contain;
+        display: inline-block;
+        left: .5rem;
+        top: .15rem;
+        margin-top:3%;
+        
+
+    }
+}
+
 
 form.search_form label {
     display: none;
@@ -576,6 +867,7 @@ section.news h1 {
 div.news {
     position: relative;
     display: inline-block;
+    vertical-align: top;
 }
 
 div.news h2 {
@@ -583,6 +875,7 @@ div.news h2 {
     font-weight: 300;
     font-size: 2em;
     margin-bottom: .25em;
+    vertical-align: text-top;
 }
 
 section.news ul {
@@ -594,6 +887,7 @@ section.news ul {
 article.news_a {
     position: relative;
     display: inline-block;
+    vertical-align: top;
     width:20em;
     height: 10em;
     overflow: hidden;
@@ -657,6 +951,7 @@ a.news_bt , a.events_bt, a.press_bt {
     display: block;
     text-decoration: none;
     color: white;
+    margin-top: 1em;
 }
 
 a.news_bt:before {
@@ -846,10 +1141,9 @@ a.logo_bt img {
 
 div.logo_bt_blue_slide {
     position: relative;
-    height: 75px;
-    padding: 10px;
-    width: 88px;
-    background-color: #3399cc;
+    height: 95px;
+    width: 108px;
+    background: url(../img/logos_generic_2nd_side_cut_02_w108px_x_h95px.jpg) no-repeat;
     display: block;
     
     transition: margin-top 0.3s linear;
@@ -899,20 +1193,98 @@ section.subscribe {
     display: inline-block;
     vertical-align: text-top;
     background-color: #3d3d3d;
-    width: 20em;
+    width: 22em;
     height: 30em;
 }
 
+section.subscribe hr {
+    display: block;
+    border-color: #807f81;
+}
+
 div.subscribe_div {
-    width:18em;
+    width:20em;
     height: 28em;
     margin: 1em;
 }
 
 div.subscribe_div h2 {
     color: #2d91ca;
+    font-weight: 700;
 }
 
+div.footer_date {
+    position: relative;
+    display: inline-block;
+    width: 4em;
+    
+}
+
+p.footer_date_day {
+    color: white;
+    font-size: 2.5em;
+    font-weight: 700;
+    margin: 0;
+}
+
+p.footer_date_month {
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin: 0;
+}
+
+div.footer_press_release_summary {
+    position: relative;
+    display: inline-block;
+    width: 8.5em;
+    margin: 0;
+    vertical-align: top;
+    color: white;
+    font-size: 1.5em;
+}
+
+form.subscribe_form {
+    position: relative;
+    
+    border-radius: 6px;
+    width: 19em;
+    height: 2em;
+    overflow: hidden;
+    display: block;
+}
+
+#subscribe_box {
+    position: relative;
+    width: 17em;
+    height: 2.4em;
+    border: none;
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    text-indent: 1em;
+    
+}
+
+section.subscribe span {
+    color: white;
+}
+
+
+#subscribe_bt {
+    position: absolute;
+    border: none;
+    width: 5.4em;
+    height: 2.4em;
+    vertical-align: top;
+    background-color: #3aa6dd;
+    display: inline-block;
+    padding: 0;
+}
+
+form.subscribe_form label {
+    display: none;
+}
 
 
 
